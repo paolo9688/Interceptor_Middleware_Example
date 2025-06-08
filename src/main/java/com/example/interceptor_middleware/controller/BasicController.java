@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/time")
 public class BasicController {
 
-    @GetMapping("/time")
+    @GetMapping("")
     public String getCurrentTime() {
-        // Restituisce la data e l'ora corrente
-        return "Current Date/Time: " + LocalDateTime.now();
+        return LocalDateTime.now().toString();
     }
 }
